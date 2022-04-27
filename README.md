@@ -1,6 +1,6 @@
 # Lung-and-Colon-Cancer
 
-Project Link : https://mahmoudanguoo.surge.sh/
+Project Link : http://mahmoudanguoo.surge.sh/ or https://mahmoudanguoo.surge.sh/
 
 Tools : Angular - Node Js - Mongo DB - DeepLearning
 
