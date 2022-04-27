@@ -1,0 +1,132 @@
+.container-fluid{
+    background-color: #F9FAFA;
+    margin-top: 70px;
+    padding: 75px 0 75px 0;
+}
+.head{
+    margin-bottom: 40px;
+}
+.head span{
+    font-size: 15px;
+    font-weight: 200;
+}
+.head h3{
+    font-size: 37px;
+}
+.card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+button{
+    width: 136px;
+    border: none;
+    background: transparent;
+    margin-bottom: 15px;
+    color: #02D9A6;
+    outline: none;
+}
+button:hover{
+ color: #535353;
+}
+.card:hover {
+    border-bottom: 4px solid #02D9A6; 
+    transition: 0.5s;
+}
+.card:hover h5{
+    color: #02D9A6;
+    transition:  0.5s;
+}
+p{
+    font-weight: 300;
+}
+.all {
+    display: flex;
+    margin-bottom: 10px;
+}
+.all span {
+    font-size: 12px;
+    margin-right: 10px;
+}
+.all i{
+    color: #02D9A6;
+    margin-right: 5px;
+    font-size: 12px;
+    padding-top: 3px;
+}
+.all-time{
+    display: inline-block;
+    text-align: center;
+    padding: 3px;
+    background: #02D9A6;
+    color: #fff;
+    position: absolute;
+    top: 223px;
+    left: 10px;
+    border-radius: 4px;
+}
+.time{
+    display: grid;
+}
+.all-time .span1 {
+    font-size: 12px;
+} 
+/* ------------ */
+@media (min-width: 320px) and (max-width:359px){
+   .all-time{
+       top: 185px;
+   }
+   .col-md-4{
+    margin-bottom: 15px;
+   }
+}
+@media (min-width: 360px) and (max-width:374px){
+    .all-time{
+        top: 215px;
+    }
+    .col-md-4{
+     margin-bottom: 15px;
+    }
+}
+@media (min-width: 375px) and (max-width:410px){
+    .all-time{
+        top: 227px;
+    }
+    .col-md-4{
+     margin-bottom: 15px;
+    }
+}
+@media (min-width: 411px) and (max-width: 575px) { 
+    .all-time{
+        top: 255px;
+    }
+    .col-md-4{
+     margin-bottom: 15px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) { 
+    .all-time{
+        top: 353px;
+    }
+    .col-md-4{
+     margin-bottom: 15px;
+    }
+}
+@media(min-width: 768px) and (max-width: 991px) {
+    .all-time{
+        top: 125px;
+    }
+    .all span{
+        margin-right: 5px;
+    }
+
+} 
+@media (min-width: 992px) and (max-width: 1199px){ 
+ .all-time{
+     top: 185px;
+ }
+}
+@media (min-width:1200px) and (max-width: 1534px){
+
+}

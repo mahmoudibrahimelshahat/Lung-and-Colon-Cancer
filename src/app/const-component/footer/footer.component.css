@@ -1,0 +1,16 @@
+footer{
+    background-color: #033B4A;
+    color: #ffffff;
+}
+.footer-copyright span{
+    color: #00D6A3;
+}
+.list-inline-item a{ 
+    color: #fff;
+    border: 1px solid #fff;
+    width: 120px;
+}
+.list-inline-item a:hover{ 
+    color: #00D6A3;
+    border: 1px solid #00D6A3;
+}

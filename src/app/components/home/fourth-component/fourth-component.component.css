@@ -1,0 +1,33 @@
+.container-fluid{
+    margin-top: 144px;
+}
+.all{
+    display: flex;
+}
+.small-all{
+    display: block;
+}
+svg{
+    width: 37px;
+    color: #02D9A6;
+    margin-right: 15px;
+}
+.lol-all{
+    display:flex ;
+}
+hr{
+    margin-bottom: 85px;
+}
+.container-fluid h1{
+    font-size: 30px;
+    color: #02D9A6;
+    margin-right: 6px;
+}
+.container-fluid span{
+    color: #02D9A6;
+    font-size: 24px;
+}
+.container-fluid h5{
+    color: #303c39;
+    font-weight: 400;
+}

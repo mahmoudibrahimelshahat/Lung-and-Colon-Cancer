@@ -1,0 +1,152 @@
+.container-fluid{
+    background-image: url('src/assets/about/2.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 470px;
+    position: relative;
+    width: 100%;
+    height: 408px;
+    /* background-attachment: fixed; */
+}
+.title{
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    color: black;
+    z-index: 2;
+    font-family: serif;
+}
+/* .overlay{
+    background: rgba(0,0,0,.2);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+} */
+/* ---------------- */
+img{
+    width: 100%;
+}
+.container-fluid-1 p{
+    word-spacing: 6px;
+    line-height: 29px;
+}
+.container-fluid-1{
+    margin-top: 75px;
+}
+.container-fluid-1 .content{
+    padding-top: 46px;
+    padding-left: 31px;
+}
+.content h1{
+    font-size: 38px;
+    font-family: serif;
+}
+.container-fluid-1 p{
+    font-weight: 300;
+    font-family: serif;
+    font-size: 19px;
+}
+.container-fluid-1 span{
+    font-size: 27px;
+    font-weight: 400;
+}
+.content p{
+    color: #717171;
+}
+.content span{
+    color: black;
+}
+/*  */
+@media (min-width: 320px) and (max-width:359px){
+   .container-fluid{
+    background-repeat: no-repeat; 
+    background-position: center;
+    background-attachment: fixed;       
+    webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width:100%; 
+   }
+   .title{
+    left: 24%;
+}
+}
+@media (min-width: 360px) and (max-width:374px){
+    .container-fluid{
+        background-repeat: no-repeat; 
+        background-position: center;
+        background-attachment: fixed;       
+        webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        width:100%; 
+       }
+       .title{
+        left: 27%;
+    }
+}
+@media (min-width: 375px) and (max-width:410px){
+    .container-fluid{
+        background-repeat: no-repeat; 
+        background-position: center;
+        background-attachment: fixed;       
+        webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        width:100%; 
+       }
+       .title{
+        left: 30%;
+    }
+}
+@media (min-width: 411px) and (max-width: 575px) { 
+    .container-fluid{
+        background-repeat: no-repeat; 
+        background-position: center;
+        background-attachment: fixed;       
+        webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        width:100%; 
+       }
+       .title{
+        left: 30%;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) { 
+    .container-fluid{
+        background-repeat: no-repeat; 
+        background-position: center;
+        background-attachment: fixed;       
+        webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        width:100%; 
+       }
+       .title{
+        left: 30%;
+    }
+}
+@media(min-width: 768px) and (max-width: 991px) {
+    .container-fluid{
+        background-repeat: no-repeat; 
+        background-position: center;
+        background-attachment: fixed;       
+        webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        width:100%; 
+       }
+       .title{
+        left: 40%;
+    }
+     
+} 

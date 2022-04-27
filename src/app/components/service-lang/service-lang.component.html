@@ -1,0 +1,220 @@
+<div class="container-fluid">
+    <div class="container text-center">
+        <div class="title">
+            Lung Service
+        </div>
+    </div>
+</div>
+<!-- ----- -->
+<!-- change profile to file  -->
+<div class="container-fluid-1" data-aos="fade-up" data-aos-duration="3000">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <form [formGroup]="uploadForm" (ngSubmit)="onSubmit()">
+                    <div class="all">
+                        <div class="before" *ngIf="!imgURL"></div>
+                        <img [src]="imgURL" *ngIf="imgURL" />
+                        <div class="kolo">
+                            <div class="lel" (click)="filePicker.click()">
+                                Upload
+                                <input type="file" class="form-control" hidden #filePicker
+                                    accept="image/x-png,image/gif,image/jpeg" (change)="setImage($event)" />
+                            </div>
+                            <button [hidden]="!showsecond" type="submit">Result</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-6 c2" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+                <form [formGroup]="PatientForm" (submit)="onSubmitt(PatientForm)">
+                    <h1>Patient Form</h1>
+                    <p>Fill the Patient Information</p>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" id="name" placeholder="First Name" class="form-control" required
+                                    minlength="3" formControlName="firstName"  onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) || (event.charCode==32)">
+                            </div>
+                            <div class="text-danger"
+                                *ngIf="PatientForm.get('firstName').touched && PatientForm.get('firstName').invalid && PatientForm.get('firstName').errors">
+                                <small *ngIf="PatientForm.get('firstName').errors.required"> First Name is
+                                    required</small>
+                                <small *ngIf="PatientForm.get('firstName').errors.minlength">Mimun length is 3
+                                    characters</small>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" id="name" placeholder="Second Name" class="form-control" required
+                                    minlength="3" formControlName="secondName"  onkeypress="return (event.charCode > 64 && event.charCode < 91) || (event.charCode > 96 && event.charCode < 123) || (event.charCode==32)">
+                            </div>
+                            <div class="text-danger"
+                                *ngIf="PatientForm.get('secondName').touched && PatientForm.get('secondName').invalid && PatientForm.get('secondName').errors">
+                                <small *ngIf="PatientForm.get('secondName').errors.required"> Second Name is
+                                    required</small>
+                                <small *ngIf="PatientForm.get('secondName').errors.minlength">Mimun length is 3
+                                    characters</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group" [class.error-form]="email.invalid && email.touched">
+                        <input type="email" id="email" placeholder="Email" class="form-control" required
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" formControlName="email">
+                    </div>
+                    <div class="text-danger" *ngIf="email.touched && email.invalid && email.errors">
+                        <small *ngIf="email.errors.required"> Email is required</small>
+                        <small *ngIf="email.errors.pattern">Please write a valid email</small>
+                    </div>
+                    <div class="form-group">
+                        <select id="gender" class="form-control" required formControlName="gender">
+                            <option value="">Select gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                        <!-- <mat-form-field style="width: 100%;">
+                            <mat-label>Select gender</mat-label>
+                            <mat-select [(value)]="selected" id="gender" required formControlName="gender">
+                              <mat-option value="male">Male</mat-option>
+                              <mat-option value="female">Female</mat-option>
+                            </mat-select>
+                          </mat-form-field> -->
+                    </div>
+                    <div class="text-danger"
+                        *ngIf="PatientForm.get('gender').touched && PatientForm.get('gender').invalid && PatientForm.get('gender').errors">
+                        <small *ngIf="PatientForm.get('gender').errors.required">Your gender is
+                            required</small>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="number" id="age" min="1" placeholder="Age" oninput="validity.valid||(value='');" class="form-control" required
+                                    minlength="1" formControlName="age">
+                            </div>
+                            <div class="text-danger"
+                                *ngIf="PatientForm.get('age').touched && PatientForm.get('age').invalid && PatientForm.get('age').errors">
+                                <small *ngIf="PatientForm.get('age').errors.required"> Age is required</small>
+                                <small *ngIf="PatientForm.get('age').errors.minlength">Mimun length is 1
+                                    characters</small>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" id="phone" placeholder="Phone" class="form-control" required
+                                    minlength="11" formControlName="phone">
+                            </div>
+                            <div class="text-danger"
+                                *ngIf="PatientForm.get('phone').touched && PatientForm.get('phone').invalid && PatientForm.get('phone').errors">
+                                <small *ngIf="PatientForm.get('phone').errors.required"> Phone is required</small>
+                                <small *ngIf="PatientForm.get('phone').errors.minlength">Mimun length is 11
+                                    characters</small>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- - -->
+                    <div class="form-group">
+                        <input type="text" id="address" placeholder="Address" class="form-control" required
+                            minlength="9" formControlName="address">
+                    </div>
+                    <div class="text-danger"
+                        *ngIf="PatientForm.get('address').touched && PatientForm.get('address').invalid && PatientForm.get('address').errors">
+                        <small *ngIf="PatientForm.get('address').errors.required"> Address is required</small>
+                        <small *ngIf="PatientForm.get('address').errors.minlength">Mimun length is 9
+                            characters</small>
+                    </div>
+                    <!-- - -->
+                    <div class="form-group">
+                        <input type="text" id="result" placeholder="result" class="form-control" required minlength="4"
+                            formControlName="result">
+                    </div>
+                    <div class="text-danger"
+                        *ngIf="PatientForm.get('result').touched && PatientForm.get('result').invalid && PatientForm.get('result').errors">
+                        <small *ngIf="PatientForm.get('result').errors.required"> Result is required</small>
+                        <small *ngIf="PatientForm.get('result').errors.minlength">Mimun length is 4
+                            characters</small>
+                    </div>
+                    <div toastContainer></div>
+                    <div class="form-group okok text-center">
+                        <button type="submit" mat-flat-button color="primary" class="final"
+                            [disabled]="PatientForm.invalid || loading">
+                            <div class="spinner bottomSpinner" *ngIf="loading">
+                                <span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28"
+                                        focusable="false">
+                                        <circle cx="14" cy="14" r="12" fill="none" stroke="#000" stroke-width="4"
+                                            opacity=".15" />
+                                        <circle pathLength="1" cx="14" cy="14" r="12" fill="none" stroke="#00A871"
+                                            stroke-width="4" stroke-dasharray="27 57" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                    </svg>
+                                </span>
+                            </div>
+                            <ng-container>Submit</ng-container>
+                        </button>
+                        <button type="button" [hidden]="!showButton" [disabled]="PatientForm.invalid"
+                            (click)="printComponent('component1')">Print</button> 
+                            <!-- new updata is  [hidden]="!showButton" -->
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="result text-center" *ngIf="result">
+            <p>{{ result.result }}</p>
+        </div>
+    </div>
+</div>
+<!-- ---------- -->
+
+
+<!-- <div class="col-md-6">
+    <form [formGroup]="uploadForm" (ngSubmit)="onSubmit()">
+        <div class="all">
+            <div class="before" *ngIf="!imgURL"></div>
+            <img [src]="imgURL" *ngIf="imgURL" />
+            <div class="kolo">
+                <div class="lel" (click)="filePicker.click()">
+                    Upload
+                    <input type="file" class="form-control" hidden #filePicker accept="image/x-png,image/gif,image/jpeg"
+                        (change)="setImage($event)" />
+                </div>
+                <button type="submit">Submit</button>
+            </div>
+        </div>
+    </form>
+</div> -->
+
+<!-- 
+
+<div class="result text-center" >
+            <p> lung diesase</p>
+        </div>
+
+  -->
+
+
+<!-- 
+       <div class="result text-center" *ngIf="result">
+            <p>&#9734; {{ result.result }} &#9734;</p>
+        </div>
+   -->
+
+<div *ngIf="printData" style="content-visibility: hidden!important;" id="component1">
+    <h1 style="text-align: center;">Lung result</h1>
+    <hr>
+    <h1> First Name: <small>{{printData?.firstName}}</small> </h1>
+    <h1> Second Name: <small>{{printData?.secondName}}</small> </h1>
+    <h1> Email: <small>{{printData?.email}}</small> </h1>
+    <h1> Gender: <small>{{printData?.gender}}</small> </h1>
+    <h1> Age: <small>{{printData?.age}}</small> </h1>
+    <h1> Address: <small>{{printData?.address}}</small> </h1>
+    <h1> Phone: <small>{{printData?.phone}}</small> </h1>
+    <h1> Result: <small>{{printData?.result}}</small> </h1>
+</div>
+<!-- ---- style="content-visibility: hidden!important;"---- -->
+<!-- <mat-form-field>
+    <mat-label>Select gender</mat-label>
+    <mat-select [(value)]="selected">
+      <mat-option value="male">Male</mat-option>
+      <mat-option value="female">Female</mat-option>
+    </mat-select>
+  </mat-form-field> -->

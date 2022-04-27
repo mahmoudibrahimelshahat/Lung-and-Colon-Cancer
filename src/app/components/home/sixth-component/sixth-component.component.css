@@ -1,0 +1,84 @@
+.container-fluid{
+    background-color: #00D6A3;
+    padding: 50px;
+}
+.all{
+    display: flex;
+}
+.contentofall{
+    display: inline-block;
+    border: 1px solid #fff;
+    padding: 20px;
+    margin-right: 13px;
+}
+.small-all{
+    display: block;
+}
+i{
+    font-size: 23px;
+    color: #fff;
+}
+span{
+    font-size: 14px;
+    color: #fff;
+    font-weight: 400;
+}
+h5{
+    color: #fff;
+}
+/* -------------- */
+@media (min-width: 320px) and (max-width:359px){
+   .col-md-4{
+    margin-bottom: 12px;
+   }
+   .all{
+       display: block;
+   }
+}
+@media (min-width: 360px) and (max-width:374px){
+    .col-md-4{
+        margin-bottom: 12px;
+       }
+       .all{
+           display: block;
+       }
+}
+@media (min-width: 375px) and (max-width:410px){
+    .col-md-4{
+        margin-bottom: 12px;
+       }
+       .all{
+           display: block;
+       }
+}
+@media (min-width: 411px) and (max-width: 575px) { 
+    .col-md-4{
+        margin-bottom: 12px;
+       }
+       .all{
+           display: block;
+       }
+}
+
+@media (min-width: 576px) and (max-width: 767px) { 
+    .col-md-4{
+        margin-bottom: 12px;
+       }
+       .all{
+           display: flex;
+       }
+}
+@media(min-width: 768px) and (max-width: 991px) {
+    .all{
+        display: block;
+    }
+    h5{
+        font-size: 14px;
+    }
+} 
+@media (min-width: 992px) and (max-width: 1199px){ 
+ 
+}
+@media (min-width:1200px) and (max-width: 1534px){
+
+}
